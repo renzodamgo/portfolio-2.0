@@ -1,0 +1,69 @@
+#logo{
+  font-family: 'Fira Code', monospace;
+  font-size: 20px;
+}
+
+#block{
+  // background-color: black;
+  font-weight: bolder;
+  animation-name: blink;
+  animation-duration: 1.3s;
+  animation-iteration-count: infinite;
+}
+@keyframes blink {
+ 0%   {opacity: 1;}
+  25%  {opacity: 0.50;}
+  50%  {opacity: 0.0;}
+  100% {opacity: 1;}
+}
+
+.nav{
+  padding-left: 3vw;
+  padding-right: 3vw;
+  margin: auto;
+  max-width: 1200px;
+  font-family: 'Fira Code', monospace;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.nav_links{
+  flex-shrink: 0;
+  display: flex;
+  // gap: 10%;
+  flex: 1 0 auto;
+  justify-content: right;
+  list-style: none;
+  padding-left: 0;
+  gap:1%
+}
+
+.flex_child {
+  // white-space: nowrap;
+  flex-shrink: 0;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+}
+ul.nav_links > li{
+  transition: all 500ms;
+  padding: 2%;
+  // margin: 0px 2% ;
+
+
+}
+
+ul.nav_links > li:hover{
+  // font-size: 20px;
+  text-decoration: underline;
+  background-color: black;
+  // padding: 10px;
+  color: white;
+  transform: translateY(-10%);
+}
+
+.statement{
+  font-family: 'Fira Code', monospace;
+  text-align: center;
+}

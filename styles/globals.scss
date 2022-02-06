@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+
+html,
+body {
+  background-color: #d2d3d1;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a{
+  transition: all 500ms;
+  position: relative;
+  z-index: 3;
+}
+a:hover{
+  // background-color: black;
+  color: rgb(219, 214, 214);
+  text-decoration: underline;
+
+
+}
+
+a:hover {
+  &:after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the pseudo element right under the content */
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, black 100%, transparent 50%);
+    animation-name: highlight;
+    animation-duration: 0.75s;
+
+  }
+}
+
+@keyframes highlight {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+
+  100% {
+    color: rgb(233, 233, 233);
+
+    width: 100%;
+    opacity: 1;
+  }
+
+}
