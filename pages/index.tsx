@@ -105,7 +105,11 @@ const Home: NextPage = () => {
 
       <div className={styles.container}>
         <div className={styles.projects}>
-          <div className={styles.project}>
+          <div className={styles.project} id={styles.camupc}>
+            <img src="img/CAMUPC.svg" alt="" />
+            <div>
+              <h2>Congreso Anual<br/> de Marketing UPC</h2>
+            </div>
 
           </div>
           <div className={styles.project}>

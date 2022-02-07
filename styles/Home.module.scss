@@ -75,13 +75,45 @@ ul.nav_links > li:hover{
 }
 
 .projects{
+  color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 5%;
   column-gap: 2.5%;
+  h2{
+    font-family: 'Fira Code', monospace;
+    text-align: center;
+  }
   .project{
+    position: relative;
     background-color: #0e1620;
     min-height: 250px;
     border-radius: 2vh;
+    img{
+      position: absolute;
+      transition: all 300ms;
+    }
   }
+
+  .project:hover{
+    cursor: pointer;
+    img{
+
+      filter: blur(10px);
+      transform: translate(-60%,-60%) scale(1.1) !important;
+    }
+
+  }
+  #camupc{
+    background-color: 0e1620;
+    img{
+
+      width: 60%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-60%,-60%) scale(1);
+    }
+
+  }
+
 }
