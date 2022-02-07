@@ -64,7 +64,7 @@ const Home: NextPage = () => {
 
     writeWords()
 
-}, [array.length]);
+}, [array.length,array]);
 
   return (
     <div className={styles.container}>
