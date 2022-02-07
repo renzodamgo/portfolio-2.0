@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
-  var array = ['creando', 'aprendiendo', 'estudiando'];
   var interval = 1000; // how much time should the delay between two iterations be (in milliseconds)?
   var promise = Promise.resolve();
 
@@ -21,18 +20,18 @@ const Home: NextPage = () => {
   async function writeWord(word: string) {
     for (let i = 0; i < word.length; i++) {
       await new Promise<void>((resolve) => {
-                setTimeout(() => {
-                   setWord(word.slice(0, i + 1))
-                  console.log(word)
-                  resolve();
-                }, 100);
-            });
+        setTimeout(() => {
+          setWord(word.slice(0, i + 1))
+          console.log(word)
+          resolve();
+        }, 100);
+      });
     }
     await new Promise<void>((resolve) => {
-                setTimeout(() => {
-                  resolve();
-                }, 3000);
-            });
+      setTimeout(() => {
+        resolve();
+      }, 3000);
+    });
 
   }
 
@@ -40,31 +39,33 @@ const Home: NextPage = () => {
     console.log(word);
     for (let i = 0; i < word.length; i++) {
       await new Promise<void>((resolve) => {
-                setTimeout(() => {
-                   setWord(word.slice(0, -(i+1)))
-                  console.log('delete')
-                  resolve();
-                }, 70);
-            });
+        setTimeout(() => {
+          setWord(word.slice(0, -(i+1)))
+          console.log('delete')
+          resolve();
+        }, 70);
+      });
     }
   }
   useEffect(() => {
-    async function writeWords(): Promise<void> {
-      for (var i = 0; i < Infinity; i++) {
+  var array = ['creando', 'aprendiendo', 'estudiando'];
 
-        await writeWord(array[0]);
-        await deleteWord(array[0]);
+    async function writeWords(): Promise<void> {
+      // for (var i = 0; i < Infinity; i++) {
+
+        // await writeWord(array[0]);
+        // await deleteWord(array[0]);
         await writeWord(array[1]);
         await deleteWord(array[1]);
         await writeWord(array[2]);
         await deleteWord(array[2]);
-      }
+      // }
 
     }
 
     writeWords()
 
-}, [array.length,array]);
+}, []);
 
   return (
     <div className={styles.container}>
@@ -101,6 +102,14 @@ const Home: NextPage = () => {
 
         </h2>
       </div>
+
+      {/* <div className={styles.container}>
+        <div className={styles.projects}>
+          <div className={styles.project}>
+
+          </div>
+        </div>
+      </div> */}
 
     </div>
   )
