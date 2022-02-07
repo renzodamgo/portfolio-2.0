@@ -75,7 +75,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <nav className={styles.nav}>
-        <h1 id={styles.logo}>renzo@damian<span id={styles.block}>█</span></h1>
+        <h1 id={styles.logo}>renzo@damian
+          {/* <span id={styles.block}>█</span> */}
+        </h1>
         <ul className={styles.nav_links}>
           <li className={styles.flex_child}>
             Projectos
