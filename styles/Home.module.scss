@@ -2,6 +2,12 @@
   font-family: 'Fira Code', monospace;
   font-size: 20px;
 }
+.container{
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
 
 #block{
   // background-color: black;
@@ -66,4 +72,16 @@ ul.nav_links > li:hover{
 .statement{
   font-family: 'Fira Code', monospace;
   text-align: center;
+}
+
+.projects{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 5%;
+  column-gap: 2.5%;
+  .project{
+    background-color: #0e1620;
+    min-height: 250px;
+    border-radius: 2vh;
+  }
 }

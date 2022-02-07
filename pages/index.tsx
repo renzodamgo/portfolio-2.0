@@ -103,13 +103,22 @@ const Home: NextPage = () => {
         </h2>
       </div>
 
-      {/* <div className={styles.container}>
+      <div className={styles.container}>
         <div className={styles.projects}>
           <div className={styles.project}>
 
           </div>
+          <div className={styles.project}>
+
+          </div>
+          <div className={styles.project}>
+
+          </div>
+          <div className={styles.project}>
+
+          </div>
         </div>
-      </div> */}
+      </div>
 
     </div>
   )
