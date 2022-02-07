@@ -9,36 +9,62 @@ const Home: NextPage = () => {
   var promise = Promise.resolve();
 
   const [word, setWord] = useState('')
-  function doSetTimeout(i:string) {
-    let timer =setTimeout(function () {
+  function doSetTimeout(i: string) {
+    setTimeout(function () {
       console.log(i);
-      setWord(word+i)
+      setWord(word + i)
     }, 500);
-    ;
-    return () => clearTimeout(timer);
-}
 
-useEffect(() => {
-    for (let i = 0; i < array[0].length; i++){
-      // doSetTimeout(array[i])
-      setTimeout(() => {
-        setWord(array[0].slice(0,i+1));
-        console.log(word);
-        }, 100 * (i+1));
-        // return () => clearTimeout(timer);
+  }
+
+
+  async function writeWord(word: string) {
+    for (let i = 0; i < word.length; i++) {
+      await new Promise<void>((resolve) => {
+                setTimeout(() => {
+                   setWord(word.slice(0, i + 1))
+                  console.log(word)
+                  resolve();
+                }, 100);
+            });
     }
-  // for (let i = 0; i < array[0].length; i++){
-  //     // doSetTimeout(array[i])
-  //     setTimeout(() => {
-  //       setWord(array[0].slice(0,-1));
-  //       console.log(word);
-  //       }, 100 * (i+1));
-  //       // return () => clearTimeout(timer);
-  //   }
+    await new Promise<void>((resolve) => {
+                setTimeout(() => {
+                  resolve();
+                }, 3000);
+            });
+
+  }
+
+  async function deleteWord(word:string) {
+    console.log(word);
+    for (let i = 0; i < word.length; i++) {
+      await new Promise<void>((resolve) => {
+                setTimeout(() => {
+                   setWord(word.slice(0, -(i+1)))
+                  console.log('delete')
+                  resolve();
+                }, 70);
+            });
+    }
+  }
+  useEffect(() => {
+    async function writeWords(): Promise<void> {
+      for (var i = 0; i < Infinity; i++) {
+
+        await writeWord(array[0]);
+        await deleteWord(array[0]);
+        await writeWord(array[1]);
+        await deleteWord(array[1]);
+        await writeWord(array[2]);
+        await deleteWord(array[2]);
+      }
+
+    }
+
+    writeWords()
 
 }, [array.length]);
-  // writeWord('dsadsads')
-
 
   return (
     <div className={styles.container}>
