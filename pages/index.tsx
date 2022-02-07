@@ -51,15 +51,15 @@ const Home: NextPage = () => {
   var array = ['creando', 'aprendiendo', 'estudiando'];
 
     async function writeWords(): Promise<void> {
-      // for (var i = 0; i < Infinity; i++) {
+      for (var i = 0; i < Infinity; i++) {
 
-        // await writeWord(array[0]);
-        // await deleteWord(array[0]);
+        await writeWord(array[0]);
+        await deleteWord(array[0]);
         await writeWord(array[1]);
         await deleteWord(array[1]);
         await writeWord(array[2]);
         await deleteWord(array[2]);
-      // }
+      }
 
     }
 
