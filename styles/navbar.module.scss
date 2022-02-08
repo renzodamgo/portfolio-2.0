@@ -27,7 +27,7 @@
   // overflow: hidden;
   // text-overflow: ellipsis;
 }
-ul.nav_links > li{
+ul.nav_links > a{
   transition: all 500ms;
   padding: 2%;
   // margin: 0px 2% ;
@@ -35,7 +35,7 @@ ul.nav_links > li{
 
 }
 
-ul.nav_links > li:hover{
+ul.nav_links > a:hover{
   // font-size: 20px;
   text-decoration: underline;
   background-color: black;

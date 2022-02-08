@@ -20,12 +20,12 @@ a {
   box-sizing: border-box;
 }
 
-a{
+a.link{
   transition: all 500ms;
   position: relative;
   z-index: 3;
 }
-a:hover{
+a:hover.link{
   // background-color: black;
   color: rgb(219, 214, 214);
   text-decoration: underline;
@@ -33,8 +33,8 @@ a:hover{
 
 }
 
-a:hover {
-  &:after{
+a:hover.link {
+  &:after.link{
     content: "";
     display: inline-block;
     position: absolute;
