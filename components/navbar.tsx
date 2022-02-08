@@ -5,9 +5,14 @@ export const NavBar = () => {
     return (
         <>
             <nav className={styles.nav}>
-                <h1 id={styles.logo}>renzo@damian
-                    {/* <span id={styles.block}>█</span> */}
+                <Link href={'/'}>
+                    <a>
+                    <h1 id={styles.logo}>renzo@damian
                 </h1>
+
+                    </a>
+                </Link>
+                    {/* <span id={styles.block}>█</span> */}
                 <ul className={styles.nav_links}>
                         <Link href={'/'}>
                             <a>
