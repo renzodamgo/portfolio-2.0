@@ -83,7 +83,7 @@ const Home: NextPage = () => {
         <div className={styles.container}>
           <h2 className={styles.statement}>
             Hola soy Renzo Damian 👋<br />
-            Actualmente trabajando en <a href="https://rebels247.com/"> @Rebels247</a><br />
+            Actualmente trabajando en <a className='link' href="https://rebels247.com/"> @Rebels247</a><br />
             <span>{word}</span><span id={styles.block}>█</span>nuevas formas de ver la web
 
           </h2>
@@ -92,17 +92,17 @@ const Home: NextPage = () => {
         <div className={styles.container}>
           <div className={styles.projects}>
               <Link href={'/proyectos/camupc'}>
-            <div className={styles.project} id={styles.camupc}>
                 <a>
+            <div className={styles.project} id={styles.camupc}>
               <img src="img/CAMUPC.svg" alt="" />
               <div>
                 {/* <h2>Congreso Anual<br/> de Marketing UPC</h2> */}
               </div>
 
-                </a>
 
 
             </div>
+                </a>
               </Link>
             <div className={styles.project}>
 

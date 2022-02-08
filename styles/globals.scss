@@ -35,7 +35,7 @@ a:hover.link{
 }
 
 a:hover.link {
-  &:after.link{
+  &:after{
     content: "";
     display: inline-block;
     position: absolute;
