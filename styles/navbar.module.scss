@@ -8,6 +8,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+
 
 }
 .nav_links{

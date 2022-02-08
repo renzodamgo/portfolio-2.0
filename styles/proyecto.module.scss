@@ -1,0 +1,29 @@
+.bg_img{
+    background-color: white;
+    height: 30vh;
+    img{
+        width: 100%;
+    height: 30vh;
+        object-fit: cover;
+
+    }
+}
+
+.proyecto{
+    color: white;
+}
+
+.container{
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+#content{
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    color: black;
+    ul{
+        list-style: none;
+        padding-left: 0;
+    }
+}
