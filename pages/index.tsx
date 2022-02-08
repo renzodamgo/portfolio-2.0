@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import Layout from '../components/layout'
 import { NavBar } from '../components/navbar'
@@ -90,13 +91,19 @@ const Home: NextPage = () => {
 
         <div className={styles.container}>
           <div className={styles.projects}>
+              <Link href={'/proyectos/camupc'}>
             <div className={styles.project} id={styles.camupc}>
+                <a>
               <img src="img/CAMUPC.svg" alt="" />
               <div>
-                <h2>Congreso Anual<br/> de Marketing UPC</h2>
+                {/* <h2>Congreso Anual<br/> de Marketing UPC</h2> */}
               </div>
 
+                </a>
+
+
             </div>
+              </Link>
             <div className={styles.project}>
 
             </div>
