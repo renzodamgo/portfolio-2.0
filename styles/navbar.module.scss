@@ -49,3 +49,9 @@ ul.nav_links > a:hover{
   color: white;
   transform: translateY(-2%);
 }
+@media screen and (max-width:768px) {
+  #proyectos{
+    display: none;
+  }
+
+}

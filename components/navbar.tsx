@@ -16,7 +16,7 @@ export const NavBar = () => {
                 <ul className={styles.nav_links}>
                         <Link href={'/'}>
                             <a>
-                    <li className={styles.flex_child}>
+                    <li className={styles.flex_child} id={styles.proyectos}>
                             Projectos
 
                     </li>
