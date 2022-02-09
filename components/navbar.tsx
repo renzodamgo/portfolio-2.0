@@ -24,13 +24,13 @@ export const NavBar = () => {
 
                         </Link>
 
-                        <Link href={'/acerca-de-mi'}>
+                        {/* <Link href={'/acerca-de-mi'}>
                             <a>
                     <li className={styles.flex_child}>
                                 Acerca de mí
                     </li>
                             </a>
-                        </Link>
+                        </Link> */}
 
                         <a href="mailto:renzo.damian.go@gmail.com">
                     <li className={styles.flex_child}>
