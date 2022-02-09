@@ -4,10 +4,10 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import Layout from '../components/layout'
-import { NavBar } from '../components/navbar'
 import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
+  const [show, setShow] = useState(false)
   var interval = 1000; // how much time should the delay between two iterations be (in milliseconds)?
   var promise = Promise.resolve();
 
@@ -39,12 +39,12 @@ const Home: NextPage = () => {
 
   }
 
-  async function deleteWord(word:string) {
+  async function deleteWord(word: string) {
     console.log(word);
     for (let i = 0; i < word.length; i++) {
       await new Promise<void>((resolve) => {
         setTimeout(() => {
-          setWord(word.slice(0, -(i+1)))
+          setWord(word.slice(0, -(i + 1)))
           console.log('delete')
           resolve();
         }, 70);
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
     }
   }
   useEffect(() => {
-  var array = ['creando', 'aprendiendo', 'estudiando'];
+    var array = ['creando', 'aprendiendo', 'estudiando'];
 
     async function writeWords(): Promise<void> {
       for (var i = 0; i < Infinity; i++) {
@@ -69,7 +69,7 @@ const Home: NextPage = () => {
 
     writeWords()
 
-}, []);
+  }, []);
 
   return (
     <div>
@@ -91,26 +91,66 @@ const Home: NextPage = () => {
 
         <div className={styles.container}>
           <div className={styles.projects}>
-              <Link href={'/proyectos/camupc'}>
-                <a>
-            <div className={styles.project} id={styles.camupc}>
-              <img src="img/CAMUPC.svg" alt="" />
-              <div>
-                {/* <h2>Congreso Anual<br/> de Marketing UPC</h2> */}
-              </div>
+            {/* <Link href={'/proyectos/camupc'}>
+              <a>
+                <div className={styles.project} id={styles.camupc}>
+                  <img src="img/CAMUPC.svg" alt="" />
+                  <div>
+                  </div>
 
 
 
-            </div>
-                </a>
-              </Link>
-            <div className={styles.project}>
+                </div>
+              </a>
+            </Link>
+             */}
+            <Link href={'/proyectos/camupc'}>
+              <a>
+                <div className={styles.project} id={styles.rebels}>
+                  <img src="img/logo_white.svg" alt="" />
+                  <div>
+                    {/* <h2>Congreso Anual<br/> de Marketing UPC</h2> */}
+                  </div>
 
-            </div>
-            <div className={styles.project}>
 
-            </div>
-            <div className={styles.project}>
+
+                </div>
+              </a>
+            </Link>
+            <Link href={'/proyectos/camupc'}>
+              <a>
+                <div className={styles.project} id={styles.inet}>
+                  <img src="img/inet_logo.png" alt="" />
+                  <div>
+                    {/* <h2>Congreso Anual<br/> de Marketing UPC</h2> */}
+                  </div>
+
+
+
+                </div>
+              </a>
+            </Link>
+            <Link href={'/proyectos/camupc'}>
+              <a>
+                <div className={styles.project} id={styles.camupc}>
+                  <img src="img/CAMUPC.svg" alt="" />
+                  <div>
+                    {/* <h2>Congreso Anual<br/> de Marketing UPC</h2> */}
+                  </div>
+
+
+
+                </div>
+              </a>
+            </Link>
+            <div id={styles.other_links}>
+              <h3>Otros Links</h3>
+
+              <a target={'_blank'} rel={'noreferrer'} href="https://www.dermosamm.com/">Dermosamm</a>
+              <a target={'_blank'} rel={'noreferrer'} href="https://www.diegofarfan.com/">Diego Farfán</a>
+              <a target={'_blank'} rel={'noreferrer'} href="https://www.arnispremium.com/">Arnis Premium</a>
+              <a target={'_blank'} rel={'noreferrer'} href="https://www.zotianmotors.com/">Zotian Motors</a>
+
 
             </div>
           </div>
