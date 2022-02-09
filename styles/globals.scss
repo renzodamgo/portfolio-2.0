@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=IBM+Plex+Sans+Thai+Looped:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=IBM+Plex+Sans+Thai+Looped:wght@300;400;600&display=swap");
 
 html,
 body {
@@ -21,21 +21,19 @@ a {
   box-sizing: border-box;
 }
 
-a.link{
+a.link {
   transition: all 500ms;
   position: relative;
   z-index: 3;
 }
-a:hover.link{
+a:hover.link {
   // background-color: black;
   color: rgb(219, 214, 214);
   text-decoration: underline;
-
-
 }
 
 a:hover.link {
-  &:after{
+  &:after {
     content: "";
     display: inline-block;
     position: absolute;
@@ -47,11 +45,10 @@ a:hover.link {
     background: linear-gradient(to top, black 100%, transparent 50%);
     animation-name: highlight;
     animation-duration: 0.75s;
-
   }
 }
 
-.bold{
+.bold {
   font-weight: bold;
 }
 
@@ -67,5 +64,4 @@ a:hover.link {
     width: 100%;
     opacity: 1;
   }
-
 }
