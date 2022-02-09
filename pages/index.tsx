@@ -105,7 +105,7 @@ const Home: NextPage = () => {
             </Link>
              */}
             <Link href={'/proyectos/camupc'}>
-              <a>
+              <a href='https://www.rebels247.com/' target={'_blank'} rel={'noreferrer'}>
                 <div className={styles.project} id={styles.rebels}>
                   <img src="img/logo_white.svg" alt="" />
                   <div>
@@ -118,7 +118,8 @@ const Home: NextPage = () => {
               </a>
             </Link>
             <Link href={'/proyectos/camupc'}>
-              <a>
+              <a href='https://www.inet.com.pe/' target={'_blank'} rel={'noreferrer'}>
+
                 <div className={styles.project} id={styles.inet}>
                   <img src="img/inet_logo.png" alt="" />
                   <div>
@@ -131,7 +132,8 @@ const Home: NextPage = () => {
               </a>
             </Link>
             <Link href={'/proyectos/camupc'}>
-              <a>
+              <a href='https://camupc.com/home' target={'_blank'} rel={'noreferrer'}>
+
                 <div className={styles.project} id={styles.camupc}>
                   <img src="img/CAMUPC.svg" alt="" />
                   <div>
